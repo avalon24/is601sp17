@@ -1,17 +1,18 @@
 <?php
 
-  echo 'HI How are you!';
+  //echo 'Hi!! How are you!';
   $obj = new main();
+  
   $car = $obj->createCar();
   $car->make = 'ford';
   $car->model = 'mustang';
   $car->year = '2017';
-
+  
   print_r($car);
  
   class main {
-   
-    public function _construct() {
+     
+    public function __construct() {
       echo 'Hello World!!!';
     }
    
@@ -20,10 +21,20 @@
       return $car;
     }
 
-    public function _destruct() {
+    public function __destruct() {
       echo 'Goodbye World!';
     }
 
   }
+  
+  class car {
+     public $make;
+     public $model;
+     public $year;
+  }
 
 ?>
+
+
+
+
